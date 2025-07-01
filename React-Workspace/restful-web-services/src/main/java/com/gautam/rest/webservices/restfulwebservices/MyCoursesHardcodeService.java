@@ -23,7 +23,7 @@ public class MyCoursesHardcodeService {
     }
 
     public MyCourses deleteById(long id) {
-        MyCourses mycourse = findById(id);
+        MyCourses mycourse = findByid(id);
         if (mycourse == null) {
             return null;
         }
@@ -33,7 +33,7 @@ public class MyCoursesHardcodeService {
         return null;
     }
 
-    MyCourses findById(long id) {
+    MyCourses findByid(long id) {
         for (MyCourses mycourse : myCourses) {
             if (mycourse.getId() == id ) {
                 return mycourse;
@@ -42,7 +42,7 @@ public class MyCoursesHardcodeService {
         return null;
     }
 
-    public MyCourses save(MyCourses myCourse) {
+    public MyCourses Save(MyCourses myCourse) {
         if (myCourse.getId() == -1 || myCourse.getId() == 0) {
             myCourse.setId(++inCounter);
             myCourses.add(myCourse);
@@ -54,3 +54,5 @@ public class MyCoursesHardcodeService {
     }
 
 }
+
+//reverting changes
